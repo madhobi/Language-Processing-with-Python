@@ -1,16 +1,16 @@
 # Language-Processing-with-Python
-Here, I am working with a dataset containing medical notes. I have focused on named entity recognition (ner) task using Spacy (Python library). The dataset
-is publicly available here: https://www.kaggle.com/datasets/finalepoch/medical-ner/data
+This is a sentiment analysis work using keras and python. The dataset contains IMBD movie reviews and publicly available to download. I'll train machine learning models to classify the reviews into positive or negative category. 
 
+#### Preparing text data
 In a typical workflow, text data processing requires the following steps:
 - tokenization
     - split into smaller units e.g., words or characters
 - standardization
     - convert all text to lowercase, remove punctuation, stopwords etc.
-- numeric representation
+- convert tokens to numeric representation
     - index the tokens
     - map tokens to numeric vector
 
-I have attached two notebooks here:
-- In the first notebook, I did some data exploration
-- In the second notebook, I used Spacy to recognize medically relevant entity. 
+#### Two types of model considering word order
+- Bag-of-words model: discard word order, ususally uses n-gram tokenization as it keeps a small amount of local word ordering
+- Sequence model: care about word order, usually uses word-level tokenization
