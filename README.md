@@ -1,5 +1,5 @@
 # Language-Processing-with-Python
-This is a sentiment analysis work using keras and python. The dataset contains IMBD movie reviews and publicly available to download. I'll train machine learning models to classify the reviews into positive or negative category. 
+This is a sentiment analysis work using keras and python. The dataset contains IMBD movie reviews and is publicly available to download from this link:  http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz. I'll train machine learning models to classify the reviews into positive or negative category. 
 
 #### Preparing text data
 In a typical workflow, text data processing requires the following steps:
