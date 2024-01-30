@@ -1,5 +1,10 @@
 # Language-Processing-with-Python
-This is a sentiment analysis work using keras and python. The dataset contains IMBD movie reviews and is publicly available to download from this link:  http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz. I'll train machine learning models to classify the reviews into positive or negative category. 
+This is a sentiment analysis work using keras and python. I'll train machine learning models to classify IMDB moview reviews into positive or negative category. 
+
+#### Dataset
+The dataset contains IMBD movie reviews and is available to download from this link:  http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz
+
+It contains 50,000 movie reviews with equal number of instances for the positive and negative labels.
 
 #### Preparing text data
 In a typical workflow, text data processing requires the following steps:
@@ -11,6 +16,11 @@ In a typical workflow, text data processing requires the following steps:
     - index the tokens
     - map tokens to numeric vector
 
-#### Two types of model considering word order
-- Bag-of-words model: discard word order, ususally uses n-gram tokenization as it keeps a small amount of local word ordering
-- Sequence model: care about word order, usually uses word-level tokenization
+Since these tasks are very common, there are already a number of builtin libraries in Python. I have used sklearn and keras to handle the text preprocessing part.
+
+#### Defining the model
+There are two types of model considering the order of the words:
+- Bag-of-words model: discard word order
+- Sequence model: carry information about word order
+
+Here I have used the bag-of-words approach. It is generally a good idea to start with a simpler model and gradually go for more complex models. In the first notebook, I have established a baseline using LogisticRegression model. Then I experiemnted with n-gram models as it keeps a small amount of local word ordering. Since the data is balanced, I have used "accuracy" as the evaluation metrics.
